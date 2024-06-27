@@ -20,7 +20,7 @@ public class SpringDataJpaApplication {
     }
 
     @Bean
-    ApplicationRunner run() {
+    ApplicationRunner runUserService() {
         return args -> {
             userService.getAll().forEach(user -> log.info("User name: {}", user.getUsername()));
         };
